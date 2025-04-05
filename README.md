@@ -114,11 +114,6 @@ For a production deployment:
 5. Consider internationalization for multiple languages
 6. Implement analytics to track usage and success rates
 
-## Contact
-
-For questions or support, please contact:
-- Email: support@reconnect.org
-- Phone: +1 (555) 123-4567
 
 ## Acknowledgments
 
