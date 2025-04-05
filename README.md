@@ -14,6 +14,30 @@ A compassionate web platform dedicated to reuniting missing persons, orphaned ch
 - Dark mode for better accessibility and user comfort
 - Responsive design that works on both desktop and mobile devices
 
+## 💻 Tech Stack
+
+### **Frontend**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Responsive Design](https://img.shields.io/badge/Responsive%20Design-000000?logo=responsive&logoColor=white&label=Responsive+Design)
+
+### **Backend**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
+
+### **Dependencies**
+
+![express](https://img.shields.io/badge/express-%5E4.18.2-blue)
+![body-parser](https://img.shields.io/badge/body--parser-^1.20.1-yellow)
+![cors](https://img.shields.io/badge/cors-^2.8.5-lightgrey)
+![fs](https://img.shields.io/badge/fs-Built--in-green)
+![path](https://img.shields.io/badge/path-Built--in-orange)
+
+---
+
 
 
 ## Running the Application
@@ -118,29 +142,7 @@ For questions or support, please contact:
 - Responsive design for all devices
 - Data persistence using JSON storage
 
-## 💻 Tech Stack
 
-### **Frontend**
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![Responsive Design](https://img.shields.io/badge/Responsive%20Design-000000?logo=responsive&logoColor=white&label=Responsive+Design)
-
-### **Backend**
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
-
-### **Dependencies**
-
-![express](https://img.shields.io/badge/express-%5E4.18.2-blue)
-![body-parser](https://img.shields.io/badge/body--parser-^1.20.1-yellow)
-![cors](https://img.shields.io/badge/cors-^2.8.5-lightgrey)
-![fs](https://img.shields.io/badge/fs-Built--in-green)
-![path](https://img.shields.io/badge/path-Built--in-orange)
-
----
 
 ### Backend
 - Node.js
