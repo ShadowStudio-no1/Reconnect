@@ -1,4 +1,8 @@
-# Reconnect - Bringing Families Together
+# Reconnect - Bringing Families Together- Family Reunification Platform 🤝
+
+A compassionate web platform designed to help reunite families by facilitating the search for missing persons.
+
+![Project Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Reconnect-/refs/heads/main/img/previe.png)
 
 A compassionate web platform dedicated to reuniting missing persons, orphaned children, homeless individuals, and those separated from their families with their loved ones.
 
@@ -102,11 +106,8 @@ For questions or support, please contact:
 
 **Note**: This is a demonstration project. In a real implementation, additional security measures, backend functionality, and legal considerations would need to be addressed.
 
-# Reconnect - Family Reunification Platform 🤝
 
-A compassionate web platform designed to help reunite families by facilitating the search for missing persons.
 
-![Project Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Reconnect-/refs/heads/main/img/previe.png)
 
 ## 🚀 Features
 
