@@ -170,7 +170,7 @@ reconnect/
 
 1. **Clone the repository**
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/ShadowStudio-no1/Reconnect
    cd reconnect
    ```
 
