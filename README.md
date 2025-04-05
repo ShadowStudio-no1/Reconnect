@@ -104,7 +104,7 @@ For questions or support, please contact:
 
 A compassionate web platform designed to help reunite families by facilitating the search for missing persons.
 
-![Project Preview](img/preview.png)
+![Project Preview](https://raw.githubusercontent.com/ShadowStudio-no1/Reconnect-/refs/heads/main/img/previe.png)
 
 ## 🚀 Features
 
