@@ -171,7 +171,7 @@ reconnect/
 1. **Clone the repository**
    ```bash
    git clone https://github.com/ShadowStudio-no1/Reconnect
-   cd reconnect
+   cd Reconnect
    ```
 
 2. **Install Node.js**
