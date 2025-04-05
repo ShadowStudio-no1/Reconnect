@@ -1,0 +1,12 @@
+This is a placeholder text file. Please replace it with an actual JPEG image file named "placeholder.jpg" in this same directory.
+
+For the best results, use a simple silhouette image of a person with dimensions approximately 300x300 pixels.
+
+You can find free placeholder silhouette images on sites like:
+- https://www.pexels.com/search/silhouette/
+- https://unsplash.com/s/photos/silhouette
+- https://pixabay.com/images/search/silhouette/
+
+After downloading an appropriate image, rename it to "placeholder.jpg" and place it in this directory.
+
+Note: The application is currently using a data URI embedded in the JavaScript code as a fallback for the placeholder image, but having an actual file here will prevent unnecessary 404 errors and improve performance. 

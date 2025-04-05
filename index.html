@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnect - Bringing Families Together</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-heart"></i> Reconnect</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#register">Register Person</a></li>
+                    <li><a href="#institutions">Institutions</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" title="Switch to Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Reuniting Lost Individuals With Their Families</h2>
+                <p>A compassionate platform dedicated to reconnecting missing persons, orphaned children, 
+                   homeless individuals, and those separated from their families.</p>
+                <div class="hero-buttons">
+                    <a href="#search" class="btn primary-btn">Find Someone</a>
+                    <a href="#register" class="btn secondary-btn">Register a Person</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Who We Help</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="icon"><i class="fas fa-user-question"></i></div>
+                    <h3>Missing Persons</h3>
+                    <p>Individuals who have gone missing due to various circumstances.</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon"><i class="fas fa-child"></i></div>
+                    <h3>Orphaned Children</h3>
+                    <p>Children without parental care looking to reconnect with extended family.</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon"><i class="fas fa-house-damage"></i></div>
+                    <h3>Homeless Individuals</h3>
+                    <p>People without shelter seeking to reunite with their families.</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon"><i class="fas fa-users-slash"></i></div>
+                    <h3>Separated Families</h3>
+                    <p>Families separated by disasters, conflict, or other circumstances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search" class="search">
+        <div class="container">
+            <h2 class="section-title">Search For Someone</h2>
+            <div class="search-container">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="location-filter">Location</label>
+                        <input type="text" id="location-filter" placeholder="City, State or Country">
+                    </div>
+                    <div class="filter-group">
+                        <label for="age-filter">Age Range</label>
+                        <div class="range-inputs">
+                            <input type="number" id="age-min" placeholder="Min" min="0" max="100">
+                            <span>to</span>
+                            <input type="number" id="age-max" placeholder="Max" min="0" max="100">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="missing">Missing Persons</option>
+                            <option value="orphaned">Orphaned Children</option>
+                            <option value="homeless">Homeless Individuals</option>
+                            <option value="separated">Separated Families</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Date Reported</label>
+                        <input type="date" id="date-filter">
+                    </div>
+                    <button id="search-btn" class="btn primary-btn">Search</button>
+                    <button id="reset-filters" class="btn text-btn">Reset Filters</button>
+                </div>
+            </div>
+            
+            <div class="search-results">
+                <div id="results-count">0 results found</div>
+                <div id="results-grid" class="results-grid">
+                    <!-- Results will be populated dynamically by JavaScript -->
+                </div>
+                <div class="pagination">
+                    <button class="page-btn" id="prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                    <span id="page-indicator">Page 1 of 1</span>
+                    <button class="page-btn" id="next-page" disabled>Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="register">
+        <div class="container">
+            <h2 class="section-title">Register a Person</h2>
+            <p class="section-description">Fill out the form below to register a missing person, orphaned child, 
+               homeless individual, or someone separated from their family.</p>
+            
+            <form id="registration-form" class="registration-form">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input type="number" id="age" name="age" min="0" max="120" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select</option>
+                                <option value="missing">Missing Person</option>
+                                <option value="orphaned">Orphaned Child</option>
+                                <option value="homeless">Homeless Individual</option>
+                                <option value="separated">Separated from Family</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Physical Description *</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Height, weight, eye color, hair color, distinctive features, etc." required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Location Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Last Known Location *</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date-reported">Date Reported *</label>
+                            <input type="date" id="date-reported" name="date-reported" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Reporter Name *</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="relationship">Relationship to Person *</label>
+                            <input type="text" id="relationship" name="relationship" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone *</label>
+                            <input type="tel" id="contact-phone" name="contact-phone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label for="photo">Recent Photograph</label>
+                        <div class="photo-upload-container">
+                            <input type="file" id="photo" name="photo" accept="image/*" onchange="handleImageUpload(event)">
+                            <div class="photo-preview-wrapper" style="display: none;">
+                                <img class="photo-preview" alt="Photo preview">
+                            </div>
+                        </div>
+                        <p class="form-help">Upload a clear, recent photo. Maximum size: 5MB</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="additional-details">Additional Details</label>
+                        <textarea id="additional-details" name="additional-details" rows="4" placeholder="Any other relevant information that might help in the search"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section consent-section">
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I consent to the storage and display of this information for the purpose of reconnecting with family members. *</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                        <label for="privacy-policy">I have read and agree to the <a href="#privacy-policy">Privacy Policy</a>. *</label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn secondary-btn">Reset Form</button>
+                    <button type="submit" class="btn primary-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="institutions" class="institutions">
+        <div class="container">
+            <h2 class="section-title">For Institutions</h2>
+            <p class="section-description">We partner with orphanages, shelters, and other institutions to help reconnect individuals with their families.</p>
+            
+            <div class="institutions-content">
+                <div class="institution-info">
+                    <h3>Institution Registration</h3>
+                    <p>If you are an Anath Ashram, shelter, or similar institution, you can register on our platform to:</p>
+                    <ul>
+                        <li>Add your facility information to our database</li>
+                        <li>Upload details of residents in your care</li>
+                        <li>Update status of listed individuals</li>
+                        <li>Manage your listings and receive inquiries</li>
+                    </ul>
+                    <a href="#institution-registration" class="btn primary-btn">Register Your Institution</a>
+                </div>
+                
+                <div class="institution-login">
+                    <h3>Institution Login</h3>
+                    <form id="institution-login-form" class="login-form">
+                        <div class="form-group">
+                            <label for="institution-email">Email</label>
+                            <input type="email" id="institution-email" name="institution-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="institution-password">Password</label>
+                            <input type="password" id="institution-password" name="institution-password" required>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Login</button>
+                        <a href="#forgot-password" class="forgot-password">Forgot Password?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Reconnect is a compassionate platform dedicated to reuniting lost individuals with their families. 
+                       We believe that everyone deserves the chance to reconnect with their loved ones, 
+                       regardless of the circumstances that led to their separation.</p>
+                    <p>Our mission is to provide a secure, accessible platform that bridges the gap between those 
+                       who are lost and those who are searching. We work with institutions, government agencies, 
+                       and individuals to create a comprehensive network of support and information.</p>
+                    <h3>Our Commitment to Privacy</h3>
+                    <p>We take data security and user privacy seriously. All personal information is protected and 
+                       only shared with explicit consent. Our platform includes safety measures to prevent misuse 
+                       and ensure the well-being of all individuals in our database.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="people-count">0</div>
+                        <div class="stat-label">People Registered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="reunited-count">0</div>
+                        <div class="stat-label">Families Reunited</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="institutions-count">0</div>
+                        <div class="stat-label">Partner Institutions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Reconnect</h3>
+                    <p>Bringing families together again</p>
+                    <div class="social-media">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="#register">Register Person</a></li>
+                        <li><a href="#institutions">Institutions</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <address>
+                        <p><i class="fas fa-envelope"></i> info@reconnect.org</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Compassion St, Anytown, AN 12345</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Reconnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html> 
